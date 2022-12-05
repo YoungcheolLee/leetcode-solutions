@@ -16,3 +16,5 @@ const numberOfSteps = (num) => {
   }
   return step;
 };
+
+console.log(numberOfSteps(num));
