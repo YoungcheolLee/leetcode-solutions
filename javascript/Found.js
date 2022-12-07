@@ -7,7 +7,7 @@
  * 단일 문장에 나타나는 최대 단어 수를 반환합니다.
  */
 
-var mostWordsFound = (sentences) => {
+const mostWordsFound = (sentences) => {
   let exceptSpace = sentences.map((element) => {
     return element.split(" ").length;
   });
