@@ -3,10 +3,15 @@
  *
  * 선형 런타임 복잡성이 있는 솔루션을 구현하고 일정한 추가 공간만 사용해야 합니다.
  */
+let nums = [4, 1, 2, 1, 2];
 
-const newNum = nums.find((element, idx, arr) => {
-  const found = arr.filter((foundEl) => foundEl === element);
-  return found.length === 1;
-});
+const singleNumber = (nums) => {
+  const newNum = nums.map((element) => {
+    const newNum2 = nums.filter((item) => item === element);
+    return newNum2;
+  });
 
-return newNum;
+  const singleNum = newNum.find((element) => element.length === 1);
+
+  return singleNum;
+};
